@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Word Up!</title>
+    <title id="title">Word Up!</title>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
@@ -12,6 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
 
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <!-- our CSS -->
     <link rel="stylesheet" href="css/styles.css"/>
 
@@ -44,6 +45,7 @@
             <!-- TODO 1
             Make a "New Game" button
             -->
+             <button id="new-game-button" class="btn btn-primary">New Game</button>
         </section>
 
         <!-- things that should not show up until the (first) game has started -->
@@ -52,11 +54,13 @@
             <!-- TODO 4
             Add some instructions so the user knows what to do.
             -->
+            <p>Spell as many words as you can before time expires, using only these letters.</p>
+            <p> (You may use a letter more than once): </p>
 
             <!-- TODO 5
             Make an empty container to hold the letter chips.
             -->
-
+            <div id="allowed-letters"></div>
             <!-- the form via which the user attempts to submit new words -->
             <form id="word-attempt-form">
                 <!-- the actual text box where the user types -->
@@ -64,6 +68,7 @@
 
                 <br>
                 <!-- red feedback chips will be injected here -->
+                  <div id="feedback"></div>
             </form>
 
             <!-- a container to display the user's word submissions -->
